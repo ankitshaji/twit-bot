@@ -23,10 +23,11 @@ function searchTweets() {
 }
 
 // postTweet();
+// setInterval(postTweet,100*30);
 //POST request - post tweet
 function postTweet() {
   //Different status check
-  const r = Math.floor(Math.random() * 100);
+  const r = Math.floor(Math.random() * 1000*60*60);
   T.post(
     "statuses/update",
     { status: "Test Tweet, random no: " + r + " : Post Request" },
